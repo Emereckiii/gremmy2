@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pay via GCash</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gcash-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: rgba(255,255,255,0.95);
+            padding-bottom: 100px;
+        }
+        .gcash-qr {
+            width: 260px;
+            height: 260px;
+            object-fit: contain;
+            border: 4px solid #007432;
+            border-radius: 20px;
+            background: #fff;
+            margin-bottom: 24px;
+        }
+        .gcash-instructions {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #222;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .gcash-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #007432;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gcash-container">
+        <h2>Pay via GCash</h2>
+        <div class="gcash-instructions">
+            Scan the QR code below using your GCash app<br>or send payment to this number:
+        </div>
+        <div class="gcash-number">0948 464 1868</div>
+        <img class="gcash-qr" src="qrcode.jpg" alt="GCash QR Code">
+        <div class="gcash-instructions">
+            After payment, please send a screenshot of your payment to the seller for confirmation.
+        </div>
+        <a href="index.html" target="_blank" style="margin-top: 24px; color: #007432; font-size: 1.1em;">&larr; Back to Shop</a>
+    </div>
+</body>
+</html>

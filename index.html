@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gremmy's Shop</title>
+        <link rel="stylesheet" href="style.css">
+        <h1>Gremmy's Shop</h1>
+            <h2>GAG PETS</h2>
+            <h3>LIMITED STOCKS ONLY!</h3>
+    </head>
+    <body>
+        <header>
+            <div class="projects-grid">
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Bearbeee1.webp" alt="Bear Bee Icon">
+    <h4>Bee Bear </h4>
+    <p><em>50PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Thy_Butterfly_V2.webp" alt="Butterfly Icon">
+    <h4>Butterfly</h4>
+    <p>200PHP</p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Chicken_Zombie_Icon.webp" alt="Chicken Zombie Icon">
+    <h4>Chicken Zombie</h4>
+    <p>80PHP</p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="DiscoBeeIcon.webp" alt="Disco Bee Icon">
+    <h4>Disco Bee</h4>
+    <p><em>25OPHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="DragonflyIcon.webp" alt="Dragonfly Icon">
+    <h4>Dragonfly</h4>
+    <p>150PHP</p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="MimicOctopusIcon.webp" alt="Mimic Octopus Icon">
+    <h4>Mimic Octopus</h4>
+    <p><em>250PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Moon_Cat.webp" alt="Moon Cat Icon">
+    <h4>Moon Cat</h4>
+    <p><em>40PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Moth.webp" alt="Moth Icon">
+    <h4>Moth</h4>
+    <p><em>60PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="PackBee.webp" alt="Pack Bee Icon">
+    <h4>Pack Bee</h4>
+    <p>70PHP</p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Petalbee.webp" alt="Petal Bee Icon">
+    <h4>Petal Bee</h4>
+    <p><em>50PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Queen_bee.webp" alt="Queen Bee Icon">
+    <h4>Queen Bee</h4>
+    <p><em>120PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="Raccon_Better_Quality.webp" alt="Raccoon Icon">
+    <h4>Raccoon </h4>
+    <p><em>250PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="RedFox.webp" alt="Red Fox Icon">
+    <h4>Red Fox</h4>
+    <p><em>50PHP</em></p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="ScarletMacawIcon.webp" alt="Scarlet Macaw Icon">
+    <h4>Scarlet Macaw</h4>
+    <p>40PHP</p>
+</div>
+</a>
+<a href="gcash.html" class="card-link" target="_blank">
+<div class="project-card">
+    <img class="project-img-small" src="SealIcon.webp" alt="Seal Icon">
+    <h4>Seal</h4>
+    <p><em>50PHP</em></p>
+</div>
+</a>
+        <style>
+           
+        </style>
+        </header>
+        <!-- GCash Modal -->
+<div id="gcashModal" class="gcash-modal" style="display:none;">
+  <div class="gcash-modal-content" id="gcashModalContent">
+    <span class="gcash-modal-close" onclick="closeGcashModal()">&times;</span>
+    <h2>Pay via GCash</h2>
+    <div class="gcash-instructions">
+      Scan the QR code below using your GCash app<br>or send payment to this number:
+    </div>
+    <div class="gcash-number">0948 464 1868</div>
+    <img class="gcash-qr" src="qrcode.jpg" alt="GCash QR Code">
+    <div class="gcash-instructions">
+      After payment, please send a screenshot of your payment to the seller for confirmation.
+    </div>
+    <button class="gcash-continue-btn" onclick="showReceiptForm()">Continue</button>
+  </div>
+</div>
+<!-- Receipt Form Template (hidden) -->
+<template id="receiptFormTemplate">
+  <span class="gcash-modal-close" onclick="closeGcashModal()">&times;</span>
+  <h2>Submit Payment Receipt</h2>
+  <div class="gcash-instructions" style="margin-bottom: 10px;">
+    Please send your GCash payment screenshot to:<br>
+    <b id="shopEmail">gremmysshop@gmail.com</b>
+    <button type="button" class="copy-email-btn" onclick="copyShopEmail()">Copy</button>
+  </div>
+  <form class="gcash-form" id="gcashForm" action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data" onsubmit="showSuccessMsg(event)">
+    <label>Your email address:<br>
+      <input type="email" name="email" required placeholder="your@email.com">
+    </label>
+    <label>Screenshot of GCash receipt:<br>
+      <input type="file" name="receipt" accept="image/*" required>
+    </label>
+    <label>Pet you bought:<br>
+      <select name="pet" required>
+        <option value="">Select a pet</option>
+        <option>Bee Bear</option>
+        <option>Butterfly</option>
+        <option>Chicken Zombie</option>
+        <option>Disco Bee</option>
+        <option>Dragonfly</option>
+        <option>Mimic Octopus</option>
+        <option>Moon Cat</option>
+        <option>Moth</option>
+        <option>Pack Bee</option>
+        <option>Petal Bee</option>
+        <option>Queen Bee</option>
+        <option>Raccoon</option>
+        <option>Red Fox</option>
+        <option>Scarlet Macaw</option>
+        <option>Seal</option>
+      </select>
+    </label>
+    <button type="submit" class="gcash-submit-btn">Send Receipt</button>
+  </form>
+  <div id="gcashSuccessMsg" style="display:none; color:#388e3c; font-weight:bold; margin-top:18px; text-align:center;">Thank you! Your receipt has been submitted and will be sent to gremmysshop@gmail.com.</div>
+</template>
+<style>
+.gcash-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+}
+.gcash-modal-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.gcash-modal-close {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 2em;
+  color: #007432;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.gcash-modal-close:hover { color: #388e3c; }
+.gcash-qr {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  border: 4px solid #007432;
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 24px;
+}
+.gcash-instructions {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #222;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.gcash-number {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #007432;
+  margin-bottom: 24px;
+}
+.gcash-continue-btn {
+  background: #43a047;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  font-family: inherit;
+  font-weight: bold;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.gcash-continue-btn:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+.gcash-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.gcash-form label {
+  font-size: 1.1em;
+  color: #22543d;
+  font-family: inherit;
+}
+.gcash-form input[type="email"],
+.gcash-form select {
+  margin-top: 4px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid #b2dfdb;
+  font-size: 1em;
+  width: 220px;
+}
+.gcash-form input[type="file"] {
+  margin-top: 4px;
+  font-size: 1em;
+}
+.gcash-submit-btn {
+  background: #a5d6a7;
+  color: #22543d;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  font-family: inherit;
+  font-weight: bold;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.gcash-submit-btn:hover {
+  background: #81c784;
+  color: #fff;
+  transform: scale(1.05);
+}
+.copy-email-btn {
+  margin-left: 8px;
+  background: #a5d6a7;
+  color: #22543d;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 0.95em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.copy-email-btn:hover {
+  background: #81c784;
+  color: #fff;
+}
+</style>
+        <footer class="garden-footer">
+            <div class="garden-footer-content">
+                <!-- Replace 'your-image.png' with your own image file -->
+                <img src="logo.webp" alt="Garden Icon" class="garden-custom-icon" id="gardenCustomIcon">
+                <button id="playMorningMoodBtn" class="garden-music-btn" onclick="toggleMusic()">
+                    <span id="musicIcon">&#9658;</span> Play Morning Mood
+                </button>
+                <span class="garden-note">Let your day bloom with music!</span>
+                <span class="garden-socials-text">
+    Facebook: <b>Gremmy's Shop</b> &nbsp;|&nbsp; Instagram: <b>Gremmy's</b> &nbsp;|&nbsp; TikTok: <b>gremmyGAG</b>
+</span>
+            </div>
+        </footer>
+        <style>
+      
+        .garden-footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            background: #43a047; /* fallback solid green */
+            background-image: url('texture.jpg');
+            background-size: contain;
+            background-repeat: repeat;
+            background-blend-mode: multiply;
+            background-color: #43a047;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            font-family: 'Segoe UI', 'Comic Sans MS', cursive, sans-serif;
+        }
+        .garden-footer-content {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .garden-custom-icon {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            margin-right: 8px;
+            border-radius: 50%;
+            box-shadow: 0 1px 4px #b2dfdb;
+            background: #fff;
+        }
+        .garden-music-btn {
+            background: #a5d6a7;
+            color: #22543d;
+            border: none;
+            border-radius: 24px;
+            padding: 10px 22px;
+            font-size: 1.1em;
+            font-family: inherit;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .garden-music-btn:hover {
+            background: #81c784;
+            transform: scale(1.05);
+        }
+        #musicIcon {
+            font-size: 1.3em;
+            color: #388e3c;
+            margin-right: 4px;
+        }
+        .garden-note {
+            font-size: 1em;
+            color: #9aff9f;
+            font-style: italic;
+            opacity: 0.85;
+            margin-left: 8px;
+        }
+        .garden-socials-text {
+            font-size: 0.9em;
+            color: #e1f5e5;
+            text-align: center;
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+        @media (max-width: 700px) {
+    .garden-footer-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .garden-socials-text {
+        margin-left: 0;
+        font-size: 0.98em;
+        text-align: center;
+    }
+    .garden-footer {
+        min-height: 90px;
+        padding: 10px 0;
+    }
+    .garden-custom-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .garden-music-btn {
+        font-size: 1em;
+        padding: 8px 14px;
+    }
+}
+@media (max-width: 500px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+        padding: 0 4px;
+    }
+    .project-card {
+        width: 98vw;
+        min-width: 0;
+        max-width: 100vw;
+        padding: 8px;
+        margin: 8px auto;
+    }
+    .project-img-small {
+        width: 60px;
+        height: 60px;
+    }
+    h1, h2, h3 {
+        font-size: 1.2em !important;
+        padding: 2px 6px;
+    }
+    .garden-footer-content {
+        gap: 4px;
+    }
+}
+        </style>
+        <script>
+        const audio = new Audio('Edvard Grieg_ Peer Gynt - Morning Mood.m4a');
+        audio.loop = true;
+        audio.addEventListener('error', function() {
+            alert('Error: Audio file could not be loaded. Please check the file path.');
+        });
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.currentTime = 0;
+                audio.play().then(() => setPlaying(true)).catch(function(error) {
+                    alert('Error playing audio: ' + error.message);
+                });
+            } else {
+                audio.pause();
+                setPlaying(false);
+            }
+        }
+        function setPlaying(isPlaying) {
+            const icon = document.getElementById('musicIcon');
+            if (icon) {
+                icon.innerHTML = isPlaying ? '&#10073;&#10073;' : '&#9658;'; // Pause || or Play >
+            }
+        }
+        audio.addEventListener('play', function() { setPlaying(true); });
+        audio.addEventListener('pause', function() { setPlaying(false); });
+        // Open GCash modal when any card is clicked
+function openGcashModal(e) {
+  e.preventDefault();
+  document.getElementById('gcashModal').style.display = 'flex';
+}
+function closeGcashModal() {
+  document.getElementById('gcashModal').style.display = 'none';
+}
+// Attach modal open to all card links
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.card-link').forEach(function(link) {
+    link.addEventListener('click', openGcashModal);
+  });
+});
+function showReceiptForm() {
+  const modalContent = document.getElementById('gcashModalContent');
+  const template = document.getElementById('receiptFormTemplate');
+  modalContent.innerHTML = template.innerHTML;
+}
+function showSuccessMsg(event) {
+  event.preventDefault();
+  document.getElementById('gcashForm').style.display = 'none';
+  document.getElementById('gcashSuccessMsg').style.display = 'block';
+  setTimeout(closeGcashModal, 2500);
+}
+function copyShopEmail() {
+  const email = 'gremmysshop@gmail.com';
+  navigator.clipboard.writeText(email).then(function() {
+    alert('Shop email copied to clipboard!');
+  });
+}
+        </script>
+        
+    </body>
+</html>
